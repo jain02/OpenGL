@@ -1,0 +1,30 @@
+glColor3f(2.0,0.0,0.5);
+glBegin(GL_LINES);
+
+glVertex2f(0.5,-0.5);
+glVertex2f(-0.5,0.5);
+glEnd();
+
+glFlush();
+
+}
+
+int main (int argc, char** argv)
+
+{
+
+glutInit(&argc,argv); /*initialize the toolkit*/
+
+glutInitDisplayMode(GLUT_SINGLE);/*set the display mode*/
+
+glutInitWindowSize(700,500);//set the window size
+
+glutInitWindowPosition(300,300);//set the window position on the screen
+
+glutCreateWindow("square"); //open window with a title
+
+glutDisplayFunc(renderFunction); //screen window is redrawn
+
+glutMainLoop();
+
+}
